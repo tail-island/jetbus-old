@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.room.withTransaction
 import com.tail_island.jetbus.R
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
 import retrofit2.Call
 import java.io.IOException

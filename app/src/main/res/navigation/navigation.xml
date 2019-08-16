@@ -3,10 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/splash">
 
     <fragment
-        android:id="@+id/splashFragment"
+        android:id="@+id/splash"
         android:name="com.tail_island.jetbus.SplashFragment"
         android:label="@string/appName"
         tools:layout="@layout/fragment_splash">

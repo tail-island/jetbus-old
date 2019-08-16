@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 lifecycleScope.launch {
                     repository.clearDatabase()
 
-                    findNavController(R.id.navControllerFragment).navigate(R.id.splashFragment)
+                    findNavController(R.id.navControllerFragment).navigate(R.id.splash)
                 }
                 true
             }
