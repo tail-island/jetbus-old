@@ -1,0 +1,11 @@
+<resources>
+    <string name="appName">jetbus</string>
+    <string name="bookmarkList">ブックマーク</string>
+    <string name="busApproachList">接近情報</string>
+    <string name="departureBusStopList">出発バス停</string>
+    <string name="arrivalBusStopList">到着バス停</string>
+    <string name="clearDatabase">バス停と路線の情報を再取得</string>
+    <string name="arrow">→</string>
+    <string name="noBusApproaches">接近中のバスはありません</string>
+    <string name="nowDownloading">バス停と路線の情報を取得しています……</string>
+</resources>

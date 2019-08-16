@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.tail_island.jetbus.SplashFragment"
+        android:label="@string/appName"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/splashFragmentToBookmarkListFragment"
+            app:destination="@id/bookmarkList" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookmarkList"
+        android:name="com.tail_island.jetbus.BookmarkListFragment"
+        android:label="@string/appName"
+        tools:layout="@layout/fragment_bookmark_list">
+
+        <action
+            android:id="@+id/bookmarkListToDepartureBusStopListAction"
+            app:destination="@id/departureBusStopList"/>
+
+        <action
+            android:id="@+id/bookmarkListToBusApproachListAction"
+            app:destination="@id/busApproachList" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/departureBusStopList"
+        android:name="com.tail_island.jetbus.DepartureBusStopListFragment"
+        android:label="@string/departureBusStopList"
+        tools:layout="@layout/fragment_departure_bus_stop_list">
+
+        <action
+            android:id="@+id/departureBusStopListToArrivalBusStopListAction"
+            app:destination="@id/arrivalBusStopList"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/arrivalBusStopList"
+        android:name="com.tail_island.jetbus.ArrivalBusStopListFragment"
+        android:label="@string/arrivalBusStopList"
+        tools:layout="@layout/fragment_arrival_bus_stop_list">
+
+        <argument
+            android:name="departureBusStopName"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/arrivalBusStopListToBusApproachListAction"
+            app:destination="@id/busApproachList"
+            app:popUpTo="@+id/bookmarkList" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/busApproachList"
+        android:name="com.tail_island.jetbus.BusApproachListFragment"
+        android:label="@string/busApproachList"
+        tools:layout="@layout/fragment_bus_approach_list">
+
+        <argument
+            android:name="departureBusStopName"
+            app:argType="string" />
+
+        <argument
+            android:name="arrivalBusStopName"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>
